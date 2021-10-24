@@ -15,13 +15,13 @@ app.use(express.json())
 
 
 //routes
+
+app.use('/api/v1/store', productsRouter)
 app.use('/', (req, res) => {
     res.send(
         'getAllProducts: "/api/v1/store/all"<br/> getProducts: "/api/v1/store/:id"'
     )
 })
-app.use('/api/v1/store', productsRouter)
-
 
 //end-middelware
 app.use(notFoundMiddleware)
