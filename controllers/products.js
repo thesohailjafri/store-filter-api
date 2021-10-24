@@ -1,14 +1,5 @@
 const Product = require('../models/product')
 
-const getProduct = async (req, res) => {
-    const { id: productID } = req.params
-    const product = await Product.findOne({ _id: productID })
-    if (!product) {
-        return next(createCustomError(`No product with id : ${productID}`, 404))
-    }
-
-    res.status(200).json({ task })
-}
 
 const getAllProducts = async (req, res) => {
     let queryObject = {}
@@ -74,6 +65,18 @@ const getAllProducts = async (req, res) => {
     const products = await result
     res.status(200).json({ total: products.length, products })
 }
+
+const getProduct = async (req, res) => {
+    // console.log('here')
+
+    const { id: productID } = req.params
+    const product = await Product.findOne({ _id: productID })
+    if (!product) {
+        return next(createCustomError(`No product with id : ${productID}`, 404))
+    }
+    res.status(200).json(product)
+}
+
 
 module.exports = {
     getProduct,
