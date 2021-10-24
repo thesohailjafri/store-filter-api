@@ -1,7 +1,13 @@
 const Product = require('../models/product')
 
 const getProduct = async (req, res) => {
-    res.status(200).json({ msg: 'product 1' })
+    const { id: productID } = req.params
+    const product = await Product.findOne({ _id: productID })
+    if (!product) {
+        return next(createCustomError(`No product with id : ${productID}`, 404))
+    }
+
+    res.status(200).json({ task })
 }
 
 const getAllProducts = async (req, res) => {
@@ -54,7 +60,7 @@ const getAllProducts = async (req, res) => {
     //field staff
 
     if (field) {
-        const fieldList = sort.split(',').join(' ')
+        const fieldList = field.split(',').join(' ')
         result = result.select(fieldList)
     }
 

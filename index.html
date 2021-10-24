@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Store Api</title>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    </head>
+
+    <body class=" bg-gray-50 ">
+        <main class="w-10/12 bg-gray-800 text-white p-10 rounded my-10 mx-auto">
+            <h1 class="pb-4 text-2xl font-bold">Welcome to store API page</h1>
+            <li>Heroku endpoints =>
+                <a class="hover:text-pink-100"
+                    href="https://sohail-store-api.herokuapp.com/api/v1/store/all">getAllProducts</a>
+                </a></li>
+            <li>Heroku endpoints =>
+                <a class="hover:text-pink-100"
+                    href="https://sohail-store-api.herokuapp.com/api/v1/store/61750517fd97fe40546103b8">getProduct</a>
+                </a></li>
+            <br />
+            <li>Filter Options</li>
+            <table class="table-auto bg-pink-50 text-gray-900 rounded-lg overflow-hidden mt-1">
+                <thead>
+                    <tr class="border-2 bg-pink-100">
+                        <th class="py-2 px-4 border-2">featured</th>
+                        <th class="py-2 px-4 border-2">name</th>
+                        <th class="py-2 px-4 border-2">company</th>
+                        <th class="py-2 px-4  border-2">numericFilters</th>
+                        <th class="py-2 px-4 border-2">sort</th>
+                        <th class="py-2 px-4  border-2">field</th>
+                        <th class="py-2 px-4 border-2">limit</th>
+                        <th class="py-2 px-4  border-2">page</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-2">true</td>
+                        <td class="py-2 px-4 border-2">any</td>
+                        <td class="py-2 px-4 border-2">ikea</td>
+                        <td class="py-2 px-4 border-2">price</td>
+                        <td class="py-2 px-4 border-2">+ { field name }</td>
+                        <td class="py-2 px-4 border-2">featured</td>
+                        <td class="py-2 px-4 border-2">0-n</td>
+                        <td class="py-2 px-4 border-2">1-n</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-2">false</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">liddy</td>
+                        <td class="py-2 px-4 border-2">rating</td>
+                        <td class="py-2 px-4 border-2">- { field name }</td>
+                        <td class="py-2 px-4 border-2">rating</td>
+                        <td class="py-2 px-4 border-2">default is 10</td>
+                        <td class="py-2 px-4 border-2">default is 1</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">caressa</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">name</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">marcos</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">price</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">company</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">default is createdAt</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                        <td class="py-2 px-4 border-2">---</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <br />
+            <li>numericFilters</li>
+            <table class="table-auto bg-pink-50 text-gray-900 rounded-lg overflow-hidden mt-1">
+                <thead>
+                    <tr class="border-2 bg-pink-100">
+                        <th class="py-2 px-4 border-2">></th>
+                        <th class="py-2 px-4 border-2">>=</th>
+                        <th class="py-2 px-4 border-2">=</th>
+                        <th class="py-2 px-4  border-2">
+                            <=</th> <th class="py-2 px-4 border-2">
+                                <</th> </tr> </thead> <tbody>
+                        <td class="py-2 px-4 border-2">greater then</td>
+                        <td class="py-2 px-4 border-2">greater then equal to</td>
+                        <td class="py-2 px-4 border-2">equal to</td>
+                        <td class="py-2 px-4 border-2">less then equal to</td>
+                        <td class="py-2 px-4 border-2">less then</td>
+                        </tbody>
+            </table>
+            <br />
+            <li>Example Of An All Endpoint</li>
+            <p class="mt-1 hover:text-pink-100">
+                <a target="_blank" href="https://sohail-store-api.herokuapp.com/api/v1/store//all?featured=true&company=caressa&name=a&sort=-name,price&field=rating,name,featured&page=2&limit=20&numericFilters=rating=4,price>1000                </a>
+                    ">
+                    https://sohail-store-api.herokuapp.com/api/v1/store//all?featured=true&company=caressa&name=a&sort=-name,price&field=rating,name,featured&page=2&limit=20&numericFilters=rating=4,price>1000
+                </a>
+            </p>
+            </br>
+            <li>Example Of A ID Endpoint</li>
+            <p class="mt-1 hover:text-pink-100">
+                <a target="_blank" href="https://sohail-store-api.herokuapp.com/api/v1/store/61750517fd97fe40546103b8">
+                    https://sohail-store-api.herokuapp.com/api/v1/store/61750517fd97fe40546103b8 </a>
+            </p>
+        </main>
+    </body>
+
+</html>

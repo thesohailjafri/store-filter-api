@@ -18,9 +18,7 @@ app.use(express.json())
 
 app.use('/api/v1/store', productsRouter)
 app.use('/', (req, res) => {
-    res.send(
-        'getAllProducts: "/api/v1/store/all"<br/> getProducts: "/api/v1/store/:id"'
-    )
+    res.sendFile('index.html', { root: __dirname })
 })
 
 //end-middelware
