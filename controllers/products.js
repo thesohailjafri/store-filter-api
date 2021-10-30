@@ -5,7 +5,7 @@ const getAllProducts = async (req, res) => {
     let queryObject = {}
     const { featured, name, company, sort, field, limit, page, numericFilters } = req.query
 
-    //filter staff
+    // filter staff
 
     if (featured) {
         queryObject.featured = featured === 'true' ? true : false
